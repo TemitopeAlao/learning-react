@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# 🍽️ React Menu Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **first React project** I built while learning from Jonas Schmedtmann’s React course.  
+It’s a simple food menu app that displays items, allows filtering by category, and updates the UI dynamically.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📖 What I Learned
 
-### `npm start`
+This project introduced me to the **core building blocks of React**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Components** – Breaking the UI into smaller, reusable parts
+- **Props** – Passing data between components
+- **Rendering Lists** – Using `.map()` to display data dynamically
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📌 Problems I Solved While Building This
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+While building this project, I ran into several problems and had to figure them out:
 
-### `npm run build`
+1. **Why my component wasn’t rendering** — I forgot to export it before importing.
+2. **`class` vs `className` confusion** — React wouldn’t apply my styles until I used `className`.
+3. **Undefined props** — I was passing props incorrectly, so the child component didn’t get the data.
+4. **Map key warnings** — Learned to add a unique `key` when mapping over items.
+5. **Folder structure confusion** — Deciding where `data.js` and images should live for cleaner imports.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💡 Personal Takeaways
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Since this was my **first hands-on project** in React:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I started understanding how **state drives the UI**
+- I got more comfortable reading and writing JSX
+- I realized how important **component structure** is for clarity
+- Debugging felt challenging at first, but I learned to read error messages carefully
+- Asking questions (a lot!) really helped me get unstuck faster
