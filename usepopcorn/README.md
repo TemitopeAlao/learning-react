@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 🍿 usePopcorn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A movie search and watchlist app built while learning React (based on Jonas Schmedtmann’s React course).
+This project was part of my **React learning journey**, and I used it to practice and solidify key React concepts—from state management to custom hooks.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Search movies from the [OMDb API](https://www.omdbapi.com/)
+- View detailed movie info (runtime, actors, director, IMDb rating, etc.)
+- Rate movies with a custom ⭐️ Star Rating component
+- Add movies to a **watched list**
+- See a summary of your watched movies (average ratings + runtime)
+- Persist watched movies in **localStorage** (so data doesn’t reset on reload)
+- Keyboard shortcuts:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - **Escape** → Close movie details
+  - **Enter** → Focus on the search bar
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📚 What I Learned
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+While building this project, I got hands-on practice with:
 
-### `npm run build`
+### 🔑 State Management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `useState` → for UI state like search queries, selected movie ID, ratings, etc.
+- **Derived state** → calculating averages instead of storing them directly.
+- **Lifting state up** → sharing movie data between components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔁 Side Effects
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `useEffect` for:
 
-### `npm run eject`
+  - Fetching movie data from OMDb
+  - Changing the page title dynamically based on the selected movie
+  - Listening to keydown events and cleaning them up
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🎯 Custom Hooks
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **`useMovies`** → handle API requests and manage loading + error state.
+- **`useLocalStorageState`** → sync state with localStorage so data persists.
+- **`useKey`** → custom hook for keyboard shortcuts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This was my first time really **extracting reusable logic** into hooks—making the code cleaner and easier to reason about.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🛠 Refs
 
-## Learn More
+- `useRef` for:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Managing focus on the search input
+  - Tracking rating decision counts without triggering re-renders
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🧩 Component Patterns
 
-### Code Splitting
+- Split UI into small, reusable components:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - `NavBar`, `Search`, `MovieList`, `MovieDetails`, `WatchedSummary`, etc.
 
-### Analyzing the Bundle Size
+- **Conditional rendering** → show loader, error messages, or results depending on state.
+- **Controlled components** → for the search input.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧑‍💻 My Journey
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+At first, the project looked intimidating, but breaking it down step by step taught me:
 
-### Advanced Configuration
+- How React apps **scale in complexity** (from small components to a whole app).
+- The importance of **thinking in states**: what data the UI depends on, and where to store it.
+- How powerful **custom hooks** can be when you see repeated patterns.
+- Why `useRef` is not just for DOM elements—it’s also for storing mutable values that shouldn’t trigger renders.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project gave me a deeper confidence in React, and I now feel more comfortable moving from “tutorial React” into writing my own projects.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ⚡ Tech Stack
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React (hooks + functional components)
+- OMDb API
+- LocalStorage
